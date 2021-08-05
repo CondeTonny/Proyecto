@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/attendance', 'attendanceController@index');
+Route::get('/student', 'studentController@index');
+Route::get('/teacher', 'teacherController@index');
+Route::get('/subject', 'subjectController@index');
+Route::get('/topics', 'topicsController@index');
+Route::get('/evaluations', 'evaluationsController@index');
