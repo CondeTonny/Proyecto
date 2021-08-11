@@ -16,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/curso', [CursoController::class, 'index']);
+Route::get('/curso/create', [CursoController::class, 'create']);
+Route::get('/curso/show', [CursoController::class, 'show']);
+
+Route::get('/home', [HomeController::class, 'index']);
+Route::get('/home/create', [HomeController::class, 'create']);
+Route::get('/home/show', [HomeController::class, 'show']);
 
 Route::get('/attendance', 'attendanceController@index');
 Route::get('/student', 'studentController@index');
